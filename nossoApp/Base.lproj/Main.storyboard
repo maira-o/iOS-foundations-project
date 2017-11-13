@@ -137,14 +137,14 @@
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3s-9T-Cde">
-                                                            <rect key="frame" x="108" y="8" width="259" height="21"/>
+                                                            <rect key="frame" x="155" y="8" width="212" height="21"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Short Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdR-WQ-RSw">
-                                                            <rect key="frame" x="108" y="39" width="259" height="46"/>
+                                                            <rect key="frame" x="155" y="39" width="212" height="46"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -161,10 +161,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="eZm-PK-d8S" firstAttribute="leading" secondItem="DzJ-R0-eDg" secondAttribute="leading" id="0HB-qN-QGg"/>
                             <constraint firstItem="eZm-PK-d8S" firstAttribute="top" secondItem="DzJ-R0-eDg" secondAttribute="top" id="ArU-mo-Ejp"/>
                             <constraint firstItem="eZm-PK-d8S" firstAttribute="bottom" secondItem="DzJ-R0-eDg" secondAttribute="bottom" id="Hag-qg-PbR"/>
                             <constraint firstItem="eZm-PK-d8S" firstAttribute="trailing" secondItem="DzJ-R0-eDg" secondAttribute="trailing" id="iz0-QC-rMr"/>
+                            <constraint firstItem="eZm-PK-d8S" firstAttribute="top" secondItem="DzJ-R0-eDg" secondAttribute="top" id="kzD-t5-8pg"/>
                             <constraint firstItem="eZm-PK-d8S" firstAttribute="leading" secondItem="DzJ-R0-eDg" secondAttribute="leading" id="l6S-wP-Cxr"/>
+                            <constraint firstItem="eZm-PK-d8S" firstAttribute="trailing" secondItem="DzJ-R0-eDg" secondAttribute="trailing" id="leE-jl-rk1"/>
+                            <constraint firstItem="eZm-PK-d8S" firstAttribute="bottom" secondItem="DzJ-R0-eDg" secondAttribute="bottom" id="nq6-cy-aAg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DzJ-R0-eDg"/>
                     </view>
@@ -176,12 +180,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="recipeList" destination="eZm-PK-d8S" id="WKv-mV-Fbm"/>
                         <segue destination="5Xj-wV-ROy" kind="show" identifier="goToDetail" id="XJs-4i-Aat"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="te1-Lk-HBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2049.5" y="210.5"/>
+            <point key="canvasLocation" x="2343.1999999999998" y="210.04497751124438"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="d0o-kh-s02">
