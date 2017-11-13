@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
                             "Interdum et malesuada fames ac ante ipsum primis in faucibus.",
                             "Maecenas sed sapien nec urna tempus volutpat. Nulla ornare eleifend sem vitae tincidunt.",
                             "Etiam a magna at felis finibus porta. Nullam posuere arcu in metus lobortis, id posuere dui ornare.",
-                            "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae."] 
+                            "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae."]
     
     
     
@@ -43,7 +43,11 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = recipeList.dequeueReusableCell(withIdentifier: recipeItemCell)
+        let cell = recipeList.dequeueReusableCell(withIdentifier: "cell")
+        cell?.textLabel?.text = titleRecipes[indexPath.row]
+        
+        return cell!
+        
     }
 
 
