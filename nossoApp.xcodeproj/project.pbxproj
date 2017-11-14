@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EE0687A1FBB039500D4A0B9 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE068791FBB039500D4A0B9 /* CustomTableViewCell.swift */; };
 		EE2B9A7C1FB48DB900955B45 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2B9A7B1FB48DB900955B45 /* FilterViewController.swift */; };
+		EEAF91211FBB0D0800ACE5C3 /* DataCellFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF91201FBB0D0800ACE5C3 /* DataCellFilter.swift */; };
+		EEAF91231FBB0D1F00ACE5C3 /* DataModelFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF91221FBB0D1F00ACE5C3 /* DataModelFilter.swift */; };
 		EEF4E7681FB47BF700091BF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF4E7671FB47BF700091BF2 /* AppDelegate.swift */; };
 		EEF4E76A1FB47BF700091BF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF4E7691FB47BF700091BF2 /* ViewController.swift */; };
 		EEF4E76D1FB47BF700091BF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEF4E76B1FB47BF700091BF2 /* Main.storyboard */; };
@@ -17,7 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EE068791FBB039500D4A0B9 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		EE2B9A7B1FB48DB900955B45 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		EEAF91201FBB0D0800ACE5C3 /* DataCellFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCellFilter.swift; sourceTree = "<group>"; };
+		EEAF91221FBB0D1F00ACE5C3 /* DataModelFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelFilter.swift; sourceTree = "<group>"; };
 		EEF4E7641FB47BF700091BF2 /* nossoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nossoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF4E7671FB47BF700091BF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEF4E7691FB47BF700091BF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +72,9 @@
 				EEF4E7761FB47BF700091BF2 /* Info.plist */,
 				EEF4E76E1FB47BF700091BF2 /* nossoApp.xcdatamodeld */,
 				EE2B9A7B1FB48DB900955B45 /* FilterViewController.swift */,
+				0EE068791FBB039500D4A0B9 /* CustomTableViewCell.swift */,
+				EEAF91201FBB0D0800ACE5C3 /* DataCellFilter.swift */,
+				EEAF91221FBB0D1F00ACE5C3 /* DataModelFilter.swift */,
 			);
 			path = nossoApp;
 			sourceTree = "<group>";
@@ -143,8 +152,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEF4E76A1FB47BF700091BF2 /* ViewController.swift in Sources */,
+				0EE0687A1FBB039500D4A0B9 /* CustomTableViewCell.swift in Sources */,
 				EEF4E7701FB47BF700091BF2 /* nossoApp.xcdatamodeld in Sources */,
 				EE2B9A7C1FB48DB900955B45 /* FilterViewController.swift in Sources */,
+				EEAF91231FBB0D1F00ACE5C3 /* DataModelFilter.swift in Sources */,
+				EEAF91211FBB0D0800ACE5C3 /* DataCellFilter.swift in Sources */,
 				EEF4E7681FB47BF700091BF2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
