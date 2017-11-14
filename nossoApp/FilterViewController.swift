@@ -32,7 +32,19 @@ class FilterViewController: UIViewController, UITableViewDataSource {
             cell.data = dataArray[indexPath.row]
             return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        if let cell = tableView.cellForRow(at: indexPath as IndexPath) {
+            
+            if cell.accessoryType == .checkmark {
+                
+                cell.accessoryType = .none
+            } else {
+                cell.accessoryType = .checkmark
+            }
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

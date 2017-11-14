@@ -45,6 +45,9 @@
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="restriction" destination="0UX-0s-SKz" id="dGl-db-6Fk"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

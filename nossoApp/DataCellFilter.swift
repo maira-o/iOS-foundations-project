@@ -9,8 +9,14 @@
 import UIKit
 
 class DataCellFilter: UITableViewCell {
-
     
+    @IBOutlet weak var restriction: UILabel!
+    
+    var data: DataModelFilter! {
+        didSet {
+            restriction.text = data.restrictionName
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
