@@ -10,6 +10,9 @@ import UIKit
 
 class FilterViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    var dataArray = [DataModelFilter]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -7,3 +7,7 @@
 //
 
 import UIKit
+
+struct DataModelFilter {
+    var restrictionName: String
+}
