@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FilterViewController: UIViewController, UITableViewDataSource {
+class FilterViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var dataArray = [DataModelFilter]()
@@ -17,9 +17,12 @@ class FilterViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
 
         self.tableView.dataSource = self
+        self.tableView.delegate = self
         
         dataArray.append(DataModelFilter(restrictionName: "Gluten Free"))
         dataArray.append(DataModelFilter(restrictionName: "Lactose Free"))
+        
+        self.tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
