@@ -27,24 +27,24 @@ class FilterViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        
             let cell = tableView.dequeueReusableCell(withIdentifier: "myRestrictionCell", for: indexPath) as! DataCellFilter
             cell.data = dataArray[indexPath.row]
             return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        if let cell = tableView.cellForRow(at: indexPath as IndexPath) {
-            
-            if cell.accessoryType == .checkmark {
-                
-                cell.accessoryType = .none
-            } else {
-                cell.accessoryType = .checkmark
-            }
-        }
-    }
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//
+//        if let cell = tableView.cellForRow(at: indexPath as IndexPath) {
+//
+//            if cell.accessoryType == .checkmark {
+//
+//                cell.accessoryType = .none
+//            } else {
+//                cell.accessoryType = .checkmark
+//            }
+//        }
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
