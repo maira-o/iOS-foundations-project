@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
 
     @IBOutlet weak var recipeList: UITableView!
     
-    let titleRecipes = ["Hamurguer", "Chicken", "Pasta", "Pancake", "Fish", "Pizza", "Salad"]
+    let titleRecipes = ["Hamburger", "Chicken", "Pasta", "Pancake", "Fish", "Pizza", "Salad"]
     
     let shortDescription = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
                             "Interdum et malesuada fames ac ante ipsum primis in faucibus.",
@@ -43,10 +43,12 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = recipeList.dequeueReusableCell(withIdentifier: "cell")
-        cell?.textLabel?.text = titleRecipes[indexPath.row]
+        let cell = recipeList.dequeueReusableCell(withIdentifier: "customCell") as! CustomTableViewCell
+        cell.titleRecipeCell.text = titleRecipes[indexPath.row]
+        cell.imageRecipeCell.image = UIImage(named: titleRecipes[indexPath.row]
+)
         
-        return cell!
+        return cell
         
     }
 
