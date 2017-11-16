@@ -36,6 +36,10 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         super.viewWillAppear(animated)
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+      return 100
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return titleRecipes.count
@@ -44,9 +48,15 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = recipeList.dequeueReusableCell(withIdentifier: "customCell") as! CustomTableViewCell
+        
+        cell.cellView.layer.cornerRadius = 15
+        cell.imageRecipeCell.layer.cornerRadius = 15
         cell.titleRecipeCell.text = titleRecipes[indexPath.row]
-        cell.imageRecipeCell.image = UIImage(named: titleRecipes[indexPath.row]
-)
+        cell.imageRecipeCell.image = UIImage(named: titleRecipes[indexPath.row])
+        
+        cell.shortDescripitionCell.text = shortDescription[indexPath.row]
+        
+        
         
         return cell
         
