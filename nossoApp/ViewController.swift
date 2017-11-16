@@ -14,10 +14,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var recipeList: UITableView!
     var recipeData = [StructRecipe]()
+    var filteredRecipeData = [StructRecipe]()
 //    let titleRecipes = ["Hamburger", "Chicken", "Pasta", "Pancake", "Fish", "Pizza", "Salad"]
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         recipeList.delegate = self
@@ -146,11 +145,15 @@ Retire-os da água com o auxílio de uma escumadeira, escorra bem.
 Para finalizar, sirva quente com um fio de azeite extra virgem ou com o molho de sua preferência."
 """, thumbnailImage: UIImage(named: "nhoque")!, titleRecipe: "Nhoque de batata doce", restriction: "Sem Glúten"))
 
+        self.generateFilteredArray()
+        self.recipeList.reloadData()
+        
     }
 
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.recipeList.reloadData()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -159,14 +162,14 @@ Para finalizar, sirva quente com um fio de azeite extra virgem ou com o molho de
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return recipeData.count
+        return filteredRecipeData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = recipeList.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
         
-        let cellData = recipeData[indexPath.row]
+        let cellData = filteredRecipeData[indexPath.row]
         cell.titleRecipeCell.text = cellData.titleRecipe
         cell.imageRecipeCell.image = cellData.image
         cell.shortDescripitionCell.text = cellData.shortDescriptionList
@@ -209,6 +212,32 @@ Para finalizar, sirva quente com um fio de azeite extra virgem ou com o molho de
                         lactose = true // criar var lactose
                     }
                 }
+            }
+            self.generateFilteredArray()
+            self.recipeList.reloadData()
+        }
+    }
+    
+    func generateFilteredArray() {
+        
+        filteredRecipeData = []
+        
+        for value in self.recipeData {
+            
+            if(glutenELactose) {
+                if value.restriction == "Sem Glúten, Sem Lactose" {
+                    filteredRecipeData.append(value)
+                }
+            } else if(gluten) {
+                if value.restriction.contains("Sem Glúten") {
+                    filteredRecipeData.append(value)
+                }
+            } else if(lactose) {
+                if value.restriction.contains("Sem Lactose") {
+                    filteredRecipeData.append(value)
+                }
+            } else {
+                filteredRecipeData.append(value)
             }
         }
     }
