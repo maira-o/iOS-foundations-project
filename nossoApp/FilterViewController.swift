@@ -8,13 +8,46 @@
 
 import UIKit
 
-class FilterViewController: UIViewController {
+class FilterViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var tableView: UITableView!
+    var dataArray = [DataModelFilter]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        
+        dataArray.append(DataModelFilter(restrictionName: "Gluten Free"))
+        dataArray.append(DataModelFilter(restrictionName: "Lactose Free"))
+        
+        self.tableView.reloadData()
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+            let cell = tableView.dequeueReusableCell(withIdentifier: "myRestrictionCell", for: indexPath) as! DataCellFilter
+            cell.data = dataArray[indexPath.row]
+            return cell
+    }
+    
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//
+//        if let cell = tableView.cellForRow(at: indexPath as IndexPath) {
+//
+//            if cell.accessoryType == .checkmark {
+//
+//                cell.accessoryType = .none
+//            } else {
+//                cell.accessoryType = .checkmark
+//            }
+//        }
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
