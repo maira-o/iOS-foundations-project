@@ -11,6 +11,7 @@ import UIKit
 class DataCellFilter: UITableViewCell {
     
     @IBOutlet weak var restriction: UILabel!
+    @IBOutlet weak var selectView: UIView!
     
     var data: DataModelFilter! {
         didSet {
@@ -21,15 +22,16 @@ class DataCellFilter: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
+        selectView.layer.cornerRadius = 15
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
         if selected {
-            backgroundColor = .red
+            selectView.backgroundColor = UIColor(red: 202/255, green: 126/255, blue: 82/255, alpha: 1)
         } else {
-            backgroundColor = .blue
+            selectView.backgroundColor = UIColor(red: 248/255, green: 165/255, blue: 98/255, alpha: 1)
         }
     }
     
