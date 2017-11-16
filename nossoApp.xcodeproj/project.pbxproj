@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0084CA881FBDA55C0065BD9F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0084CA871FBDA55C0065BD9F /* DataModel.swift */; };
+		0084CA8A1FBDE77E0065BD9F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0084CA891FBDE77E0065BD9F /* DetailViewController.swift */; };
 		0EE0687A1FBB039500D4A0B9 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE068791FBB039500D4A0B9 /* CustomTableViewCell.swift */; };
 		EE2B9A7C1FB48DB900955B45 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2B9A7B1FB48DB900955B45 /* FilterViewController.swift */; };
 		EEAF91211FBB0D0800ACE5C3 /* DataCellFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAF91201FBB0D0800ACE5C3 /* DataCellFilter.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		0084CA871FBDA55C0065BD9F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		0084CA891FBDE77E0065BD9F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0EE068791FBB039500D4A0B9 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		EE2B9A7B1FB48DB900955B45 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		EEAF91201FBB0D0800ACE5C3 /* DataCellFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCellFilter.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				EEAF91201FBB0D0800ACE5C3 /* DataCellFilter.swift */,
 				EEAF91221FBB0D1F00ACE5C3 /* DataModelFilter.swift */,
 				0084CA871FBDA55C0065BD9F /* DataModel.swift */,
+				0084CA891FBDE77E0065BD9F /* DetailViewController.swift */,
 			);
 			path = nossoApp;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0084CA8A1FBDE77E0065BD9F /* DetailViewController.swift in Sources */,
 				EEF4E76A1FB47BF700091BF2 /* ViewController.swift in Sources */,
 				0EE0687A1FBB039500D4A0B9 /* CustomTableViewCell.swift in Sources */,
 				EEF4E7701FB47BF700091BF2 /* nossoApp.xcdatamodeld in Sources */,

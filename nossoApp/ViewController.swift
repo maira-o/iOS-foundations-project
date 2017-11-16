@@ -14,6 +14,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var recipeList: UITableView!
     var recipeData = [StructRecipe]()
+    var selectedRecipe: StructRecipe?
 //    let titleRecipes = ["Hamburger", "Chicken", "Pasta", "Pancake", "Fish", "Pizza", "Salad"]
     
     
@@ -179,6 +180,32 @@ Para finalizar, sirva quente com um fio de azeite extra virgem ou com o molho de
         return cell
         
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var recipeSelected = indexPath
+        print(recipeSelected.row)
+        self.selectedRecipe = recipeData[indexPath.row]
+        //goToDetail
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+//        if let indexPath = recipeList.indexPathForSelectedRow {
+//            let selectedRow = indexPath.row
+//            let detailVC = segue.destination as! DetailViewController
+//            detailVC.in = self.recipeList[indexPath.row]
+//        }
+//
+//        if let identifier = segue.identifier {
+//
+//            if( identifier == "goToDetail" ) {
+//
+//                let destinationViewController = segue.destination as! DetailViewController
+//                destinationViewController.customString = "GREEN IS SETTING"
+                
+//            }
+    
+    }
 
     
 //    override func viewDidLoad() {
@@ -188,7 +215,7 @@ Para finalizar, sirva quente com um fio de azeite extra virgem ou com o molho de
 //    override func didReceiveMemoryWarning() {
 //        super.didReceiveMemoryWarning()
 //    }
-    
+
     var glutenELactose: Bool = false
     var vazio: Bool = false
     var gluten: Bool = false
