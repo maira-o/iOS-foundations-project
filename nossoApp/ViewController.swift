@@ -188,8 +188,29 @@ Para finalizar, sirva quente com um fio de azeite extra virgem ou com o molho de
 //    override func didReceiveMemoryWarning() {
 //        super.didReceiveMemoryWarning()
 //    }
+    
+    var glutenELactose: Bool = false
+    var vazio: Bool = false
+    var gluten: Bool = false
+    var lactose: Bool = false
 
-
-
+    @IBAction func backToViewController(_sender: UIStoryboardSegue) {
+        if let indexArray = (_sender.source as? FilterViewController)?.indexes {
+            
+            if indexArray.count == 2 {
+                glutenELactose = true
+            } else {
+                if indexArray.isEmpty {
+                    vazio = true // reloadData
+                } else {
+                    if indexArray[0].row == 0 {
+                        gluten = true // criar var gluten
+                    } else {
+                        lactose = true // criar var lactose
+                    }
+                }
+            }
+        }
+    }
 }
 
