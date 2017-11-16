@@ -121,7 +121,7 @@ Coloque a massa em um refratário já untado e leve ao forno pré-aquecido a 180
 """, thumbnailImage: UIImage(named: "bolo-milho")!, titleRecipe: "Bolo Cremoso de Milho", restriction: "Sem Glúten"))
 
         recipeData.append(StructRecipe(descriptionRecipe: "Esta receita de nhoque de batata-doce é uma ótima opção para uma refeição leve e nutritiva, já que é elaborada com batata-doce, conhecida no mundo fitness por ser uma boa fonte de carboidratos de baixo índice glicêmico, ou seja, não provoca picos de glicemia e ainda oferece energia prolongada.", descriptionTitle: "Descrição", image: UIImage(named: "nhoque")!, ingredients: """
-"2 colheres rasas (sopa) de semente de chia
+2 colheres rasas (sopa) de semente de chia
 5 colheres (sopa) água
 1 kg de batata doce
 Sal e noz moscada moída a gosto
@@ -144,7 +144,7 @@ Porcione a massa e faça cilindros. Com uma faca, corte os nhoques em tamanhos r
 Para testar o ponto da massa: Em uma panela funda com bastante água fervente, coloque alguns nhoques. Assim que subirem à superfície, retire e experimente, se estiverem muito moles ou se a massa desmanchar, acrescente o restante da farinha de arroz à massa.
 Após acertar o ponto da massa, cozinhe pequenas porções de nhoques em água fervente e salgada.
 Retire-os da água com o auxílio de uma escumadeira, escorra bem.
-Para finalizar, sirva quente com um fio de azeite extra virgem ou com o molho de sua preferência."
+Para finalizar, sirva quente com um fio de azeite extra virgem ou com o molho de sua preferência.
 """, thumbnailImage: UIImage(named: "nhoque")!, titleRecipe: "Nhoque de batata doce", restriction: "Sem Glúten"))
 
         self.generateFilteredArray()
