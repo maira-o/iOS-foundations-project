@@ -153,6 +153,10 @@ Para finalizar, sirva quente com um fio de azeite extra virgem ou com o molho de
         super.viewWillAppear(animated)
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+      return 100
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recipeData.count
@@ -166,6 +170,11 @@ Para finalizar, sirva quente com um fio de azeite extra virgem ou com o molho de
         cell.titleRecipeCell.text = cellData.titleRecipe
         cell.imageRecipeCell.image = cellData.image
         cell.shortDescripitionCell.text = cellData.shortDescriptionList
+
+        
+        cell.cellView.layer.cornerRadius = 15
+        cell.imageRecipeCell.layer.cornerRadius = 15
+
         
         return cell
         
