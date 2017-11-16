@@ -36,7 +36,7 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
             let cell = tableView.dequeueReusableCell(withIdentifier: "myRestrictionCell", for: indexPath) as! DataCellFilter
             cell.data = dataArray[indexPath.row]
         
-//        cell.layer.cornerRadius = 15
+
         
             return cell
     }
