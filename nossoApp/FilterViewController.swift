@@ -23,6 +23,8 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
         dataArray.append(DataModelFilter(restrictionName: "Lactose Free"))
         
         self.tableView.reloadData()
+        
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,18 +38,6 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
             return cell
     }
     
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//
-//        if let cell = tableView.cellForRow(at: indexPath as IndexPath) {
-//
-//            if cell.accessoryType == .checkmark {
-//
-//                cell.accessoryType = .none
-//            } else {
-//                cell.accessoryType = .checkmark
-//            }
-//        }
-//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -66,10 +56,19 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
 
 }
     
+    var indexes: [IndexPath] = []
+    
     @IBAction func backToRecipes(_ sender: UIButton) {
         // Salvar
         
+        if let indexes = tableView.indexPathsForSelectedRows {
+            self.indexes = indexes
+        }
+        
+        
+        
         self.performSegue(withIdentifier: "backToRecipes", sender: self)
     }
+
     
 }
