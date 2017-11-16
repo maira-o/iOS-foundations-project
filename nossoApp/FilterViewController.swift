@@ -65,4 +65,11 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
     }
 
 }
+    
+    @IBAction func backToRecipes(_ sender: UIButton) {
+        // Salvar
+        
+        self.performSegue(withIdentifier: "backToRecipes", sender: self)
+    }
+    
 }
