@@ -88,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="2122" y="1302"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="PnD-fT-1aH">
             <objects>
-                <viewController id="5Xj-wV-ROy" sceneMemberID="viewController">
+                <viewController id="5Xj-wV-ROy" customClass="DetailViewController" customModule="nossoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CKS-D0-AEt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,6 +152,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="NSX-JW-KbS"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionRecipe" destination="pam-Ac-dVD" id="epS-RX-ehz"/>
+                        <outlet property="ingredients" destination="5X2-vA-5b9" id="DVn-t3-Vnc"/>
+                        <outlet property="recipeImage" destination="vSW-8n-deh" id="3FZ-5N-9FG"/>
+                        <outlet property="steps" destination="ZqK-dk-f6r" id="TZh-13-80e"/>
+                        <outlet property="titleDescription" destination="gmy-LM-S49" id="fha-IT-e7J"/>
+                        <outlet property="titleIngredients" destination="QoT-jj-xjt" id="Kjm-AT-fHc"/>
+                        <outlet property="titleRecipe" destination="U8P-eO-ocS" id="YEC-Dh-bFe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tag-Jo-HV5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

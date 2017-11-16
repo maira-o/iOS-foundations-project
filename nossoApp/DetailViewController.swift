@@ -9,27 +9,33 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+   
+    // MARK: - Properties
+    var recipeDetail: StructRecipe!
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    // MARK: - Outlets
+    @IBOutlet weak var recipeImage: UIImageView!
+    @IBOutlet weak var titleRecipe: UILabel!
+    @IBOutlet weak var titleDescription: UILabel!
+    @IBOutlet weak var descriptionRecipe: UILabel!
+    @IBOutlet weak var titleIngredients: UILabel!
+    @IBOutlet weak var ingredients: UILabel!
+    @IBOutlet weak var steps: UILabel!
+    
+    // MARK: - Functions
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.recipeImage.image = recipeDetail.image
+        self.titleRecipe.text = recipeDetail.titleRecipe
+        self.titleDescription.text = recipeDetail.descriptionTitle
+        self.descriptionRecipe.text = recipeDetail.descriptionRecipe
+        self.titleIngredients.text = recipeDetail.ingredientsTitle
+        self.ingredients.text = recipeDetail.ingredients
+        self.steps.text = recipeDetail.steps
+        
     }
-    */
 
 }
